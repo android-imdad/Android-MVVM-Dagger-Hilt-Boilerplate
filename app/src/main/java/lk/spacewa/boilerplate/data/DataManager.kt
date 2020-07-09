@@ -1,14 +1,12 @@
 package lk.spacewa.boilerplate.data
 
 import lk.spacewa.boilerplate.data.local.prefs.PreferencesHelper
-import lk.spacewa.boilerplate.data.remote.ApiHelper
 
 /**
  * Created by Imdad on 05/11/20.
  */
-interface DataManager : PreferencesHelper, ApiHelper {
+interface DataManager : PreferencesHelper {
     fun setUserAsLoggedOut()
-    fun updateApiHeader(userId: Long?, accessToken: String?)
     fun updateUserInfo(
             accessToken: String?,
             userId: Long?,

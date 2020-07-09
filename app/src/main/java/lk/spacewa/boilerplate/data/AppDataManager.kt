@@ -1,12 +1,9 @@
 package lk.spacewa.boilerplate.data
 
 import android.content.Context
-import androidx.lifecycle.MutableLiveData
 import com.google.gson.Gson
 import lk.spacewa.boilerplate.data.DataManager.LoggedInMode
 import lk.spacewa.boilerplate.data.local.prefs.PreferencesHelper
-import lk.spacewa.boilerplate.data.remote.ApiHeader
-import lk.spacewa.boilerplate.data.remote.ApiHelper
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -14,19 +11,16 @@ import javax.inject.Singleton
  * Created by Imdad on 05/11/20.
  */
 @Singleton
-class AppDataManager @Inject constructor(private val mContext: Context, private val mPreferencesHelper: PreferencesHelper, private val mApiHelper: ApiHelper, private val mGson: Gson) : DataManager {
+class AppDataManager @Inject constructor(private val mContext: Context, private val mPreferencesHelper: PreferencesHelper, private val mGson: Gson) : DataManager {
 
 
     override var currentAccessToken: String?
         get() = mPreferencesHelper.currentAccessToken
         set(accessToken) {
             mPreferencesHelper.currentAccessToken = accessToken
-            mApiHelper.apiHeader?.protectedApiHeader?.accessToken = accessToken
         }
 
 
-    override val apiHeader: ApiHeader?
-        get() = mApiHelper.apiHeader
 
     override var currentUserEmail: String?
         get() = mPreferencesHelper.currentUserEmail
@@ -77,11 +71,6 @@ class AppDataManager @Inject constructor(private val mContext: Context, private 
                 null)
     }
 
-    override fun updateApiHeader(userId: Long?, accessToken: String?) {
-        mApiHelper.apiHeader?.protectedApiHeader?.userId = userId
-        mApiHelper.apiHeader?.protectedApiHeader?.accessToken = accessToken
-    }
-
     override fun updateUserInfo(
             accessToken: String?,
             userId: Long?,
@@ -95,7 +84,6 @@ class AppDataManager @Inject constructor(private val mContext: Context, private 
         currentUserName = userName
         currentUserEmail = email
         currentUserProfilePicUrl = profilePicPath
-        updateApiHeader(userId, accessToken)
     }
 
 

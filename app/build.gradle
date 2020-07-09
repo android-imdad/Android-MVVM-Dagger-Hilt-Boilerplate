@@ -1,12 +1,12 @@
 
 
 apply plugin: 'com.android.application'
-//apply from: '../config/quality/quality.gradle'
 apply plugin: "kotlin-android"
 apply plugin: 'kotlin-android-extensions'
 
 apply plugin: "kotlin-kapt"
 apply plugin: 'dagger.hilt.android.plugin'
+apply plugin: "com.apollographql.apollo"
 
 
 android {
@@ -86,24 +86,17 @@ dependencies {
     // debug database
     debugImplementation "com.amitshekhar.android:debug-db:$rootProject.debugDBVersion"
 
-    // dependency injection
-//    implementation "com.google.dagger:dagger:$rootProject.dagger2Version"
-//    annotationProcessor "com.google.dagger:dagger-compiler:$rootProject.dagger2Version"
-//    annotationProcessor "com.google.dagger:dagger-android-processor:$rootProject.dagger2Version"
-//    implementation "com.google.dagger:dagger-android-support:$rootProject.dagger2Version"
-
-//    implementation "com.google.dagger:dagger:$rootProject.dagger2Version"
-//    implementation "com.google.dagger:dagger-android:$rootProject.dagger2Version"
-//    implementation "com.google.dagger:dagger-android-support:$rootProject.dagger2Version"
-//    kapt "com.google.dagger:dagger-compiler:$rootProject.dagger2Version"
-//    kapt "com.google.dagger:dagger-android-processor:$rootProject.dagger2Version"
-
-    //Dagger - Hilt
+    // dependency injection Dagger - Hilt
     implementation "com.google.dagger:hilt-android:$hilt_version"
     kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
     implementation "androidx.hilt:hilt-lifecycle-viewmodel:$rootProject.hiltJetpack"
     kapt "androidx.hilt:hilt-compiler:$rootProject.hiltJetpack"
 
+
+    //Apollo Graphql
+    implementation "com.apollographql.apollo:apollo-runtime:$rootProject.apolloVersion"
+    // Coroutines extensions for easier asynchronicity handling
+    implementation "com.apollographql.apollo:apollo-coroutines-support:$rootProject.apolloVersion"
 
     // reactive
     implementation "io.reactivex.rxjava2:rxjava:$rootProject.rxjava2Version"
