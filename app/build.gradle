@@ -67,12 +67,6 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     kapt "com.android.databinding:compiler:$plugin_version"
 
-    // network
-    implementation "com.amitshekhar.android:rx2-android-networking:$rootProject.rx2FastAndroidNetworking"
-
-    // database
-    implementation "androidx.room:room-rxjava2:$rootProject.roomDatabaseVersion"
-    annotationProcessor "androidx.room:room-compiler:$rootProject.roomDatabaseVersion"
 
     // font
 //    implementation "uk.co.chrisjenx:calligraphy:$rootProject.calligraphyVersion"
@@ -92,15 +86,20 @@ dependencies {
     implementation "androidx.hilt:hilt-lifecycle-viewmodel:$rootProject.hiltJetpack"
     kapt "androidx.hilt:hilt-compiler:$rootProject.hiltJetpack"
 
+    //network
+    implementation "com.squareup.okhttp3:okhttp:$rootProject.okhttp3Version"
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.2.1'
+
 
     //Apollo Graphql
     implementation "com.apollographql.apollo:apollo-runtime:$rootProject.apolloVersion"
+    implementation "com.apollographql.apollo:apollo-rx3-support:$rootProject.apolloVersion"
     // Coroutines extensions for easier asynchronicity handling
     implementation "com.apollographql.apollo:apollo-coroutines-support:$rootProject.apolloVersion"
 
     // reactive
-    implementation "io.reactivex.rxjava2:rxjava:$rootProject.rxjava2Version"
-    implementation "io.reactivex.rxjava2:rxandroid:$rootProject.rxandroidVersion"
+    implementation "io.reactivex.rxjava3:rxjava:$rootProject.rxjava3Version"
+    implementation "io.reactivex.rxjava3:rxandroid:$rootProject.rxandroid3Version"
 
     // swipe view
     implementation "com.mindorks:placeholderview:$rootProject.placeholderviewVersion"

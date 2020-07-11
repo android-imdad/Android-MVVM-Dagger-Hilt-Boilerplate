@@ -2,7 +2,7 @@ package lk.spacewa.boilerplate.base
 
 import androidx.databinding.ObservableBoolean
 import androidx.lifecycle.ViewModel
-import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.rxjava3.disposables.CompositeDisposable
 import lk.spacewa.boilerplate.data.DataManager
 import lk.spacewa.boilerplate.utils.rx.SchedulerProvider
 import java.lang.ref.WeakReference

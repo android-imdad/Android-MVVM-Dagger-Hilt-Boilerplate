@@ -1,6 +1,6 @@
 package lk.spacewa.boilerplate.utils.rx
 
-import io.reactivex.Scheduler
+import io.reactivex.rxjava3.core.Scheduler
 
 /**
  * Created by Imdad on 05/11/20.
