@@ -2,6 +2,7 @@ package lk.spacewa.boilerplate.data
 
 import android.content.Context
 import com.google.gson.Gson
+import dagger.hilt.android.qualifiers.ApplicationContext
 import lk.spacewa.boilerplate.data.DataManager.LoggedInMode
 import lk.spacewa.boilerplate.data.local.prefs.PreferencesHelper
 import javax.inject.Inject
@@ -11,7 +12,7 @@ import javax.inject.Singleton
  * Created by Imdad on 05/11/20.
  */
 @Singleton
-class AppDataManager @Inject constructor(private val mContext: Context, private val mPreferencesHelper: PreferencesHelper, private val mGson: Gson) : DataManager {
+class AppDataManager @Inject constructor(@ApplicationContext private val mContext: Context, private val mPreferencesHelper: PreferencesHelper, private val mGson: Gson) : DataManager {
 
 
     override var currentAccessToken: String?

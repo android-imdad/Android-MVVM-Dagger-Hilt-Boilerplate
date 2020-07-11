@@ -13,7 +13,6 @@ import lk.spacewa.boilerplate.data.AppDataManager
 import lk.spacewa.boilerplate.data.DataManager
 import lk.spacewa.boilerplate.data.local.prefs.PreferencesHelper
 import lk.spacewa.boilerplate.data.local.prefs.PreferencesHelperImpl
-import lk.spacewa.boilerplate.di.ApiInfo
 import lk.spacewa.boilerplate.di.PreferenceInfo
 import lk.spacewa.boilerplate.utils.AppConstants
 import lk.spacewa.boilerplate.utils.rx.AppSchedulerProvider
@@ -29,24 +28,10 @@ class AppModule {
 
 
     @Provides
-    @ApiInfo
-    fun provideApiKey(): String {
-        return BuildConfig.API_KEY
-    }
-
-
-    @Provides
-    @Singleton
-    fun provideContext(application: Application): Context {
-        return application
-    }
-
-    @Provides
     @Singleton
     fun provideDataManager(appDataManager: AppDataManager): DataManager {
         return appDataManager
     }
-
 
     @Provides
     @Singleton

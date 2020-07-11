@@ -1,6 +1,7 @@
 package lk.spacewa.boilerplate.ui.splash
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
@@ -9,6 +10,7 @@ import lk.spacewa.boilerplate.BR
 import lk.spacewa.boilerplate.R
 import lk.spacewa.boilerplate.base.BaseActivity
 import lk.spacewa.boilerplate.databinding.ActivitySplashBinding
+import timber.log.Timber
 
 /**
  * Created by Imdad on 05/11/20.
@@ -17,6 +19,7 @@ import lk.spacewa.boilerplate.databinding.ActivitySplashBinding
 class SplashActivity : BaseActivity<ActivitySplashBinding?, SplashViewModel?>(), SplashNavigator {
 
     private val mSplashViewModel: SplashViewModel by viewModels()
+
     override val bindingVariable: Int
         get() = BR.viewModel
 
@@ -31,7 +34,6 @@ class SplashActivity : BaseActivity<ActivitySplashBinding?, SplashViewModel?>(),
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mSplashViewModel.navigator = this
-
 
     }
 
