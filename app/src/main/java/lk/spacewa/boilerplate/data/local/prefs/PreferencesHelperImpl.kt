@@ -1,7 +1,9 @@
 package lk.spacewa.boilerplate.data.local.prefs
 
+import android.app.Application
 import android.content.Context
 import android.content.SharedPreferences
+import dagger.hilt.android.qualifiers.ApplicationContext
 import lk.spacewa.boilerplate.data.DataManager.LoggedInMode
 import lk.spacewa.boilerplate.di.PreferenceInfo
 import lk.spacewa.boilerplate.utils.AppConstants
@@ -10,7 +12,7 @@ import javax.inject.Inject
 /**
  * Created by Imdad on 05/11/20.
  */
-class PreferencesHelperImpl @Inject constructor(context: Context, @PreferenceInfo prefFileName: String?) : PreferencesHelper {
+class PreferencesHelperImpl @Inject constructor(@ApplicationContext private val context: Context, @PreferenceInfo prefFileName: String?) : PreferencesHelper {
     private val mPrefs: SharedPreferences
     override var currentAccessToken: String?
         get() = mPrefs.getString(PREF_KEY_ACCESS_TOKEN, null)

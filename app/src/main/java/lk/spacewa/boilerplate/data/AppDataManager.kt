@@ -1,9 +1,14 @@
 package lk.spacewa.boilerplate.data
 
 import android.content.Context
+import com.apollographql.apollo.api.Response
 import com.google.gson.Gson
+import dagger.hilt.android.qualifiers.ApplicationContext
+import io.reactivex.rxjava3.core.Observable
 import lk.spacewa.boilerplate.data.DataManager.LoggedInMode
 import lk.spacewa.boilerplate.data.local.prefs.PreferencesHelper
+import lk.spacewa.boilerplate.data.remote.repository.PokemonRepository
+import lk.spacewa.trafficops.GetPokemonsQuery
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -11,7 +16,7 @@ import javax.inject.Singleton
  * Created by Imdad on 05/11/20.
  */
 @Singleton
-class AppDataManager @Inject constructor(private val mContext: Context, private val mPreferencesHelper: PreferencesHelper, private val mGson: Gson) : DataManager {
+class AppDataManager @Inject constructor(@ApplicationContext private val mContext: Context, private val mPreferencesHelper: PreferencesHelper,private val mPokemonRepository: PokemonRepository, private val mGson: Gson) : DataManager {
 
 
     override var currentAccessToken: String?
@@ -59,6 +64,10 @@ class AppDataManager @Inject constructor(private val mContext: Context, private 
         set(selectedLanguage) {
             mPreferencesHelper.selectedLanguage = selectedLanguage
         }
+
+    override fun getPokemons(): Observable<Response<GetPokemonsQuery.Data>> {
+       return mPokemonRepository.getPokemons()
+    }
 
 
     override fun setUserAsLoggedOut() {

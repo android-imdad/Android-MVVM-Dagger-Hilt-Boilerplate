@@ -18,7 +18,7 @@ import lk.spacewa.boilerplate.utils.NetworkUtils
 /**
  * Created by Imdad on 05/11/20.
  */
-abstract class BaseActivity<T : ViewDataBinding?, V : BaseViewModel<*>?> : AppCompatActivity(), BaseFragment.Callback {
+abstract class BaseActivity<T : ViewDataBinding?, V : BaseViewModel?> : AppCompatActivity(), BaseFragment.Callback {
 
     // TODO
 // this can probably depend on isLoading variable of BaseViewModel,

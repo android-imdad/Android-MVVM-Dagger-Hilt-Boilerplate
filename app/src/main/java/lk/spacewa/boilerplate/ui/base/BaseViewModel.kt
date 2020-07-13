@@ -2,7 +2,7 @@ package lk.spacewa.boilerplate.base
 
 import androidx.databinding.ObservableBoolean
 import androidx.lifecycle.ViewModel
-import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.rxjava3.disposables.CompositeDisposable
 import lk.spacewa.boilerplate.data.DataManager
 import lk.spacewa.boilerplate.utils.rx.SchedulerProvider
 import java.lang.ref.WeakReference
@@ -10,12 +10,13 @@ import java.lang.ref.WeakReference
 /**
  * Created by Imdad on 05/11/20.
  */
-abstract class BaseViewModel<N>(val dataManager: DataManager?,
+abstract class BaseViewModel(val dataManager: DataManager?,
                                 val schedulerProvider: SchedulerProvider?) : ViewModel() {
     var isLoading = ObservableBoolean()
         private set
     val compositeDisposable: CompositeDisposable
-    private var mNavigator: WeakReference<N?>? = null
+
+
     override fun onCleared() {
         compositeDisposable.dispose()
         super.onCleared()
@@ -25,15 +26,6 @@ abstract class BaseViewModel<N>(val dataManager: DataManager?,
         isLoading = isLoadingNew
     }
 
-    var navigator: N?
-        get() = mNavigator!!.get()
-        set(value) {
-            mNavigator = WeakReference(value)
-        }
-
-//    fun setNavigator(navigator: N) {
-//        mNavigator = WeakReference(navigator)
-//    }
 
     init {
         compositeDisposable = CompositeDisposable()

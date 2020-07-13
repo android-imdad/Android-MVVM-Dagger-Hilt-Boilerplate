@@ -16,7 +16,7 @@ buildscript {
     }
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath "com.android.tools.build:gradle:4.0.0"
+        classpath 'com.android.tools.build:gradle:3.6.3'
         classpath "com.google.dagger:hilt-android-gradle-plugin:$hilt_version"
         classpath "com.apollographql.apollo:apollo-gradle-plugin:$apollo_version"
 
@@ -78,10 +78,11 @@ ext {
     rx2FastAndroidNetworking = '1.0.1'
     navCompVersion = "1.0.0"
     apolloVersion = "2.2.2"
+    okhttp3Version = "4.7.2"
 
     hiltJetpack = '1.0.0-alpha01'
-    rxjava2Version = '2.1.9'
-    rxandroidVersion = '2.0.2'
+    rxjava3Version = '3.0.4'
+    rxandroid3Version = '3.0.0'
     placeholderviewVersion = '0.6.1'
     debugDBVersion = '1.0.3'
     timberVersion = '4.7.0'

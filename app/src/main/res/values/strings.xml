@@ -1,6 +1,4 @@
 <resources>
     <string name="app_name">MVVM Boilerplate</string>
-
-
-
+    <string name="base_api_url">https://graphql-pokemon.now.sh</string>
 </resources>
