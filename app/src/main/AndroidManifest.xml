@@ -15,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name="lk.spacewa.boilerplate.ui.splash.SplashActivity">
+        <activity android:name="lk.spacewa.boilerplate.ui.home.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

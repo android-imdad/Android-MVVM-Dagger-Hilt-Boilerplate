@@ -1,6 +1,7 @@
 package lk.spacewa.boilerplate.data.remote.repository
 
-import android.database.Observable
+import com.apollographql.apollo.api.Response
+import io.reactivex.rxjava3.core.Observable
 import lk.spacewa.trafficops.GetPokemonsQuery
 
 /**
@@ -8,5 +9,5 @@ import lk.spacewa.trafficops.GetPokemonsQuery
  */
 interface PokemonRepository {
 
-    fun getPokemons () : Observable<GetPokemonsQuery>
+    fun getPokemons () : Observable<Response<GetPokemonsQuery.Data>>
 }

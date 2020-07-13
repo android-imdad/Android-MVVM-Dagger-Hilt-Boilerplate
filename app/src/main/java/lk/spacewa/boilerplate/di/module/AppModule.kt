@@ -11,6 +11,8 @@ import lk.spacewa.boilerplate.data.DataManager
 import lk.spacewa.boilerplate.data.local.prefs.PreferencesHelper
 import lk.spacewa.boilerplate.data.local.prefs.PreferencesHelperImpl
 import lk.spacewa.boilerplate.data.remote.ApolloRxHelper
+import lk.spacewa.boilerplate.data.remote.repository.PokemonRepository
+import lk.spacewa.boilerplate.data.remote.repository.PokemonRepositoryImpl
 import lk.spacewa.boilerplate.di.PreferenceInfo
 import lk.spacewa.boilerplate.utils.AppConstants
 import lk.spacewa.boilerplate.utils.rx.AppSchedulerProvider
@@ -48,6 +50,12 @@ class AppModule {
     @Singleton
     fun providePreferencesHelper(preferencesHelperImpl: PreferencesHelperImpl): PreferencesHelper {
         return preferencesHelperImpl
+    }
+
+    @Provides
+    @Singleton
+    fun providePokemonRepository(pokemonRepositoryImpl: PokemonRepositoryImpl): PokemonRepository {
+        return pokemonRepositoryImpl
     }
 
     @Provides

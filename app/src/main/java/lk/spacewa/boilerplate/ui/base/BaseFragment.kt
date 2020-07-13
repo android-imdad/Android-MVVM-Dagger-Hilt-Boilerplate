@@ -13,7 +13,7 @@ import androidx.fragment.app.Fragment
 /**
  * Created by Imdad on 05/11/20.
  */
-abstract class BaseFragment<T : ViewDataBinding?, V : BaseViewModel<*>?> : Fragment() {
+abstract class BaseFragment<T : ViewDataBinding?, V : BaseViewModel?> : Fragment() {
 
     var baseActivity: BaseActivity<*, *>? = null
         private set

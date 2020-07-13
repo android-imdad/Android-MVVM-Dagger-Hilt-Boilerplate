@@ -48,10 +48,10 @@ class NetworkModule {
 
     @Provides
     @Singleton
-    fun okHttpClient(loggingInterceptor: HttpLoggingInterceptor?, cache: Cache?): OkHttpClient? {
-        return loggingInterceptor?.let {
+    fun okHttpClient(loggingInterceptor: HttpLoggingInterceptor?, cache: Cache?): OkHttpClient {
+        return loggingInterceptor.let {
             OkHttpClient.Builder()
-                .addInterceptor(it)
+                .addInterceptor(it!!)
                 .connectTimeout(10, TimeUnit.SECONDS)
                 .writeTimeout(30, TimeUnit.SECONDS)
                 .readTimeout(30, TimeUnit.SECONDS)
