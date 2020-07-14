@@ -1,4 +1,4 @@
-package lk.spacewa.boilerplate.base
+package lk.spacewa.boilerplate.ui.base
 
 import android.app.Dialog
 import android.content.Context

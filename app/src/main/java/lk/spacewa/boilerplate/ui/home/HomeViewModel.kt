@@ -2,7 +2,7 @@ package lk.spacewa.boilerplate.ui.home
 
 import androidx.hilt.lifecycle.ViewModelInject
 import dagger.hilt.android.scopes.ActivityScoped
-import lk.spacewa.boilerplate.base.BaseViewModel
+import lk.spacewa.boilerplate.ui.base.BaseViewModel
 import lk.spacewa.boilerplate.data.DataManager
 import lk.spacewa.boilerplate.utils.SingleLiveEvent
 import lk.spacewa.boilerplate.utils.rx.SchedulerProvider

@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
 import lk.spacewa.boilerplate.BR
 import lk.spacewa.boilerplate.R
-import lk.spacewa.boilerplate.base.BaseActivity
+import lk.spacewa.boilerplate.ui.base.BaseActivity
 import lk.spacewa.boilerplate.databinding.ActivityHomeBinding
 
 /**

@@ -1,4 +1,4 @@
-package lk.spacewa.boilerplate.base
+package lk.spacewa.boilerplate.ui.base
 
 import androidx.databinding.ObservableBoolean
 import androidx.lifecycle.ViewModel
