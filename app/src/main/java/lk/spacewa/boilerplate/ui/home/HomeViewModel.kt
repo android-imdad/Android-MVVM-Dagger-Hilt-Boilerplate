@@ -11,6 +11,8 @@ import lk.spacewa.trafficops.GetPokemonsQuery
 /**
  * Created by Imdad on 05/11/20.
  */
+
+// ActivityScoped annotation will allow the view model to be reused by multiple fragments pertaining to the activity
 @ActivityScoped
 class HomeViewModel @ViewModelInject constructor(dataManager: DataManager, schedulerProvider: SchedulerProvider) : BaseViewModel(dataManager, schedulerProvider){
 
@@ -20,6 +22,5 @@ class HomeViewModel @ViewModelInject constructor(dataManager: DataManager, sched
             compositeDisposable.add(dataManager?.getPokemons()?.subscribe {
                 pokemonDataEvent.value = it.data;
             })
-
     }
 }
