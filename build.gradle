@@ -70,12 +70,8 @@ ext {
     supportLibraryVersion = '1.1.0'
     materialVersion = '1.1.0'
     vectorDrawableVersion = '1.1.0'
-    animatedVectorDrawableVersion = '1.1.0'
     gsonVersion = '2.8.5'
-    calligraphyVersion = '2.2.0'
     glideVersion = '4.8.0'
-    roomDatabaseVersion = '2.2.5'
-    rx2FastAndroidNetworking = '1.0.1'
     navCompVersion = "1.0.0"
     apolloVersion = "2.2.2"
     okhttp3Version = "4.7.2"
@@ -94,7 +90,6 @@ ext {
     mockitoVersion = '2.15.0'
 
     //fonts
-    calligraphyVersion = '3.1.1'
     viewPumpVersion = '2.0.3'
 
 

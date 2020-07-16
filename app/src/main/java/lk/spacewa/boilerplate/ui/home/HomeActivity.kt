@@ -9,6 +9,7 @@ import lk.spacewa.boilerplate.BR
 import lk.spacewa.boilerplate.R
 import lk.spacewa.boilerplate.ui.base.BaseActivity
 import lk.spacewa.boilerplate.databinding.ActivityHomeBinding
+import lk.spacewa.trafficops.GetPokemonsQuery
 
 /**
  * Created by Imdad on 05/11/20.
@@ -36,13 +37,15 @@ class HomeActivity : BaseActivity<ActivityHomeBinding?, HomeViewModel?>() {
         super.onCreate(savedInstanceState)
         viewModel?.getPokemonInfo()
         viewModel?.pokemonDataEvent?.observe(this, Observer {
-            val homeRvAdapter = HomeRvAdapter(it.pokemons()!!, this@HomeActivity)
-            val layoutManager = LinearLayoutManager(this@HomeActivity)
-            viewDataBinding?.rvPokemonDetails?.setLayoutManager(layoutManager)
-            viewDataBinding?.rvPokemonDetails?.adapter = homeRvAdapter
+            initRecyclerView(it)
         })
+    }
 
-
+    private fun initRecyclerView(pokemonData : GetPokemonsQuery.Data){
+        val homeRvAdapter = HomeRvAdapter(pokemonData.pokemons()!!, this@HomeActivity)
+        val layoutManager = LinearLayoutManager(this@HomeActivity)
+        viewDataBinding?.rvPokemonDetails?.setLayoutManager(layoutManager)
+        viewDataBinding?.rvPokemonDetails?.adapter = homeRvAdapter
     }
 
 
