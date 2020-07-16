@@ -1,7 +1,6 @@
 package lk.spacewa.boilerplate
 
 import android.app.Application
-import com.yariksoffice.lingver.Lingver
 import dagger.hilt.android.HiltAndroidApp
 import lk.spacewa.boilerplate.utils.AppLogger
 
@@ -11,17 +10,10 @@ import lk.spacewa.boilerplate.utils.AppLogger
 @HiltAndroidApp
 class MvvmApp : Application() {
 
-//    @Inject
-//    var mCalligraphyConfig: CalligraphyConfig? = null
-
-
     override fun onCreate() {
         super.onCreate()
-        Lingver.init(this, "en")
-
         AppLogger.init()
 
-//        CalligraphyConfig.initDefault(mCalligraphyConfig)
     }
 
 
