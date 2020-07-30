@@ -6,10 +6,10 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
 import lk.spacewa.boilerplate.BR
+import lk.spacewa.boilerplate.GetPokemonsQuery
 import lk.spacewa.boilerplate.R
 import lk.spacewa.boilerplate.ui.base.BaseActivity
 import lk.spacewa.boilerplate.databinding.ActivityHomeBinding
-import lk.spacewa.trafficops.GetPokemonsQuery
 
 /**
  * Created by Imdad on 05/11/20.

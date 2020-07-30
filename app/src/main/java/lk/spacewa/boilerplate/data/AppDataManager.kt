@@ -5,10 +5,10 @@ import com.apollographql.apollo.api.Response
 import com.google.gson.Gson
 import dagger.hilt.android.qualifiers.ApplicationContext
 import io.reactivex.rxjava3.core.Observable
+import lk.spacewa.boilerplate.GetPokemonsQuery
 import lk.spacewa.boilerplate.data.DataManager.LoggedInMode
 import lk.spacewa.boilerplate.data.local.prefs.PreferencesHelper
 import lk.spacewa.boilerplate.data.remote.repository.PokemonRepository
-import lk.spacewa.trafficops.GetPokemonsQuery
 import javax.inject.Inject
 import javax.inject.Singleton
 

@@ -4,9 +4,9 @@ import io.reactivex.rxjava3.core.Observable
 import com.apollographql.apollo.ApolloCall
 import com.apollographql.apollo.ApolloClient
 import com.apollographql.apollo.api.Response
+import lk.spacewa.boilerplate.GetPokemonsQuery
 import lk.spacewa.boilerplate.data.remote.ApolloRxHelper
 import lk.spacewa.boilerplate.utils.rx.SchedulerProvider
-import lk.spacewa.trafficops.GetPokemonsQuery
 import javax.inject.Inject
 
 /**

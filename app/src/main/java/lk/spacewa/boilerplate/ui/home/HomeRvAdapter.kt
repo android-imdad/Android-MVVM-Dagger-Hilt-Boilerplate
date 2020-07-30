@@ -11,9 +11,9 @@ import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.bumptech.glide.request.RequestOptions
+import lk.spacewa.boilerplate.GetPokemonsQuery
 import lk.spacewa.boilerplate.R
 import lk.spacewa.boilerplate.databinding.ItemPokemonDetailsBinding
-import lk.spacewa.trafficops.GetPokemonsQuery
 
 class HomeRvAdapter(myDataset: List<GetPokemonsQuery.Pokemon>, context: Context) : RecyclerView.Adapter<HomeRvAdapter.ViewHolder?>() {
     private val mDataset: List<GetPokemonsQuery.Pokemon> = myDataset
