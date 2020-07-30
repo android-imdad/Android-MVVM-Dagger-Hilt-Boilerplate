@@ -4,11 +4,11 @@ import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.scopes.ActivityScoped
 import kotlinx.coroutines.launch
+import lk.spacewa.boilerplate.GetPokemonsQuery
 import lk.spacewa.boilerplate.ui.base.BaseViewModel
 import lk.spacewa.boilerplate.data.DataManager
 import lk.spacewa.boilerplate.utils.SingleLiveEvent
 import lk.spacewa.boilerplate.utils.rx.SchedulerProvider
-import lk.spacewa.trafficops.GetPokemonsQuery
 
 /**
  * Created by Imdad on 05/11/20.
