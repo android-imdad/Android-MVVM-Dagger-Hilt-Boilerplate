@@ -5,7 +5,7 @@ buildscript {
 
     ext {
         plugin_version = "3.3.1"
-        kotlin_version = "1.3.72"
+        kotlin_version = "1.4.10"
         hilt_version = "2.28-alpha"
         apollo_version = "2.2.2"
 
@@ -61,22 +61,22 @@ ext {
     targetSdkVersion = 28
     compileSdkVersion = 28
     buildToolsVersion = '28.0.3'
-    constraintLayoutVersion = '1.1.3'
+    constraintLayoutVersion = '2.0.4'
     recyclerViewVersion = '1.1.0'
     cardViewVersion = '1.0.0'
     ktxVersion = "1.2.5"
 
     // App dependencies
-    supportLibraryVersion = '1.1.0'
-    materialVersion = '1.1.0'
+    supportLibraryVersion = '1.2.0'
+    materialVersion = '1.2.1'
     vectorDrawableVersion = '1.1.0'
     gsonVersion = '2.8.5'
     glideVersion = '4.8.0'
     navCompVersion = "1.0.0"
     apolloVersion = "2.2.2"
-    okhttp3Version = "4.7.2"
+    okhttp3Version = "4.9.0"
 
-    hiltJetpack = '1.0.0-alpha01'
+    hiltJetpack = '1.0.0-alpha02'
     rxjava3Version = '3.0.4'
     rxandroid3Version = '3.0.0'
     placeholderviewVersion = '0.6.1'
@@ -86,7 +86,7 @@ ext {
 
     // Test dependencies
     junitVersion = '4.12'
-    espressoVersion = '3.1.0'
+    espressoVersion = '3.3.0'
     mockitoVersion = '2.15.0'
 
     //fonts
